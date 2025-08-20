@@ -244,9 +244,9 @@ const char* gen_prop(string prefix, string command) {
 
 /// Read the timestamp from WebDAV server
 optional<vector<FileEntry>> WebDavClient::get_remote_files() {
-    string prefix = "d:";
+    string prefix = "D:";
     if (this->nextcloud) {
-        prefix = "D:";
+        prefix = "d:";
     }
 
     // Use PROPFIND to fetch file metadata
